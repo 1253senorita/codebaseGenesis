@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- TODO Remove the following exclude if you want to backup device-protected storage files. -->
+    <exclude domain="device_specific_domain" />
+
+    <!-- TODO Remove the following exclude if you want to backup no-backup designated files. -->
+    <exclude domain="no_backup_domain" />
+</full-backup-content>

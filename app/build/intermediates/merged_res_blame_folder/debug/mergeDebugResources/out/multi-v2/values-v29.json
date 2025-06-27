@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.TYTgoogle.TYTfirebase.TYTexample.app-mergeDebugResources-78:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\55341\\.gradle\\caches\\8.14.2\\transforms\\dd5d3c7af769623b29b70166940d701b\\transformed\\jetified-core-splashscreen-1.0.1\\res\\values-v29\\values-v29.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,374",
+                        "endLines": "6,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "369,464"
+                    }
+                }
+            ]
+        }
+    ]
+}

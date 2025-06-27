@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.TYTgoogle.TYTfirebase.TYTexample.app-mergeDebugResources-78:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\55341\\.gradle\\caches\\8.14.2\\transforms\\ba37512958ff87ae7f86dce95e06295c\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

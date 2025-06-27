@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "108262343680",
+    "project_id": "gnasist3000",
+    "storage_bucket": "gnasist3000.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108262343680:android:96c2baa0dcf86f8dd684e5",
+        "android_client_info": {
+          "package_name": "com.TYTgoogle.TYTfirebase.TYTexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108262343680-hpcs9jjviaa6s6jv94t34v9vr6rku99t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.TYTgoogle.TYTfirebase.TYTexample",
+            "certificate_hash": "686991ab87801f616f3fdc24ea9d4471ba8f28f6"
+          }
+        },
+        {
+          "client_id": "108262343680-0dc08po1du6g93dfk9kc530j1thfn71o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj31wvdd4kjd0E9qxuvcxIUXTbwQpar8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108262343680-0dc08po1du6g93dfk9kc530j1thfn71o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

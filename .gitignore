@@ -1,0 +1,70 @@
+gitignore
+# Generated files
+# =========================================
+# Built application files
+*.apk
+*.aab
+*.ap_
+*.a_
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated source (covers all build/generated/ folders)
+**/build/generated/
+
+# Caches & Build output
+# =========================================
+.gradle/
+**/build/ # Covers project root build/ and all module build/ folders
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio Profiler data
+*.hprof
+*.snapshot
+
+# Log files
+*.log
+
+# Keystore files (NEVER commit these)
+# =========================================
+*.jks
+*.keystore
+
+# Local configuration files (IDE-specific, OS-specific, local environment)
+# =========================================
+# IntelliJ IDEA / Android Studio
+.idea/
+
+# Module files (often managed by IDE and can be regenerated)
+*.iml
+modules.xml # Generally safe to ignore, can be specific to IDE setup
+
+# Local properties (SDK path, API keys - DO NOT COMMIT if it contains sensitive info)
+local.properties # Assuming only one at project root
+
+# OS-generated files
+# =========================================
+# Mac OS X
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node.js dependencies (if applicable to your project, e.g. for React Native parts or build scripts)
+# =========================================
+node_modules/
+functions/node_modules/ # If you have a Firebase Functions or similar JS project folder
+
+# Other
+# =========================================
+# If diff.txt is a temporary file you created and should not be versioned
+diff.txt
