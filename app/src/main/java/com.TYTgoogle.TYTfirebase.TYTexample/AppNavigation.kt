@@ -30,7 +30,7 @@ object LoginRoute {
     const val route = "login"
 }
 
-object MoviesRoute {
+object MajorRoute {
     const val routeTemplate = "movies/{userEmail}" // 사용자 이메일을 전달받기 위한 템플릿
     fun createRoute(userEmail: String?) = "movies/${userEmail ?: "Guest"}" // 실제 경로 생성 함수
     const val USER_EMAIL_ARG = "userEmail" // MoviesScreen에서 받을 인자 이름
@@ -38,7 +38,7 @@ object MoviesRoute {
 
 // 메인 영화 목록 화면 (예시)
 @Composable
-fun MoviesScreen(userEmail: String?, onLogout: () -> Unit) {
+fun MajorScreen(userEmail: String?, onLogout: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -46,11 +46,11 @@ fun MoviesScreen(userEmail: String?, onLogout: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        Text("Welcome to Movies, ${userEmail ?: "Guest"}!")
+        Text("Welcome to AppNavigation.kt  in  Major 의 메이져 스크린 과  49 라인, ${userEmail ?: "Guest"}!")
         Spacer(modifier = Modifier.height(16.dp))
         // 여기에 영화 목록이나 다른 콘텐츠 UI가 들어갈 수 있습니다.
         Button(onClick = onLogout) {
-            Text("Logout")
+            Text("Logout 메이져 스크린 53 라인")
         }
     }
 }
@@ -67,7 +67,7 @@ fun AppNavigation(
     // 앱 시작 시 사용자가 이미 로그인했는지 확인하여 시작 지점 결정
     // 실제로는 ViewModel에서 이 로직을 처리하고 초기 라우트를 결정하는 것이 좋습니다.
     val startDestination = if (auth.currentUser != null) {
-        MoviesRoute.createRoute(auth.currentUser?.email)
+        MajorRoute.createRoute(auth.currentUser?.email)
     } else {
         LoginRoute.route
     }
@@ -84,7 +84,7 @@ fun AppNavigation(
                     val userEmailForRoute = firebaseUser.email // 또는 displayName 등 필요한 정보
 
                     // MoviesScreen으로 이동하고, 경로에 사용자 이메일 포함
-                    navController.navigate(MoviesRoute.createRoute(userEmailForRoute)) {
+                    navController.navigate(MajorRoute.createRoute(userEmailForRoute)) {
                         // 로그인 화면은 백스택에서 제거 (뒤로 가기 시 다시 안 보이게)
                         popUpTo(LoginRoute.route) { inclusive = true }
                         // 이미 MoviesScreen이 백스택에 있다면 새로 만들지 않고 기존 것을 사용
@@ -96,23 +96,23 @@ fun AppNavigation(
                     // 여기서는 추가적인 스낵바 호출이 필요 없을 수 있습니다.
                     // showSnackBar("Navigating to Movies screen...") // 필요하다면 추가
                 },
-                 onNavigateToSignUp = { navController.navigate("signup_route_if_needed") }, // 만약 별도 가입 화면이 있다면
+                onNavigateToSignUp = { navController.navigate("signup_route_if_needed") }, // 만약 별도 가입 화면이 있다면
                 showSnackBar = showSnackBar, // LoginScreen 내부에서 스낵바를 사용하도록 전달
             )
         }
 
         composable(
-            route = MoviesRoute.routeTemplate, // 경로 템플릿 사용
+            route = MajorRoute.routeTemplate, // 경로 템플릿 사용
             arguments = listOf(
-                navArgument(MoviesRoute.USER_EMAIL_ARG) {
+                navArgument(MajorRoute.USER_EMAIL_ARG) {
                     type = NavType.StringType
                     nullable = true // 사용자 이메일이 없을 수도 있음을 고려
                 },
             ), // 인자 정의
         ) { backStackEntry ->
             // 전달받은 사용자 이메일 가져오기
-            val userEmail = backStackEntry.arguments?.getString(MoviesRoute.USER_EMAIL_ARG)
-            MoviesScreen(
+            val userEmail = backStackEntry.arguments?.getString(MajorRoute.USER_EMAIL_ARG)
+            MajorScreen(
                 userEmail = userEmail,
                 onLogout = {
                     auth.signOut() // Firebase 로그아웃
@@ -132,3 +132,5 @@ fun AppNavigation(
         // }
     }
 }
+
+

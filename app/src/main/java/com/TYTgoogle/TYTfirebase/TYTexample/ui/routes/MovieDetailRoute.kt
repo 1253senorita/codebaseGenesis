@@ -8,6 +8,10 @@ package com.TYTgoogle.TYTfirebase.TYTexample.ui.routes
 
 import kotlinx.serialization.Serializable
 
+
+@Serializable
+object MajorRoute
+
 @Serializable
 object LoginRoute
 
