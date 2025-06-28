@@ -22,6 +22,9 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.google.services)
+    //id("org.jetbrains.kotlin.android") // 또는 alias(libs.plugins.kotlin.android)
+
+
 }
 
 android {
@@ -54,11 +57,16 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+
+        //jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        // 다른 코틀린 컴파일러 옵션들...
+        // 예: allWarningsAsErrors.set(true)
+        // freeCompilerArgs.add("-Xopt-in=kotlin.RequiresOptIn")
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true

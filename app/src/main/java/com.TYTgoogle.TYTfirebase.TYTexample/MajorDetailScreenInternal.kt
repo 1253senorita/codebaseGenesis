@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MovieDetailScreenInternal(movieId: String, onNavigateBack: () -> Unit) {
+fun MajorDetailScreenInternal( MajorId: String, onNavigateBack: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -23,12 +23,12 @@ fun MovieDetailScreenInternal(movieId: String, onNavigateBack: () -> Unit) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text("Movie Detail Screen", style = MaterialTheme.typography.headlineSmall)
+        Text(" Major Detail Screen", style = MaterialTheme.typography.headlineSmall)
         Spacer(modifier = Modifier.height(8.dp))
-        Text("Showing details for movie ID: $movieId")
+        Text("Showing details for  Major ID: $ MajorId")
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onNavigateBack) {
-            Text("Back to Movies")
+            Text("Back to  Major")
         }
     }
 }

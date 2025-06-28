@@ -18,13 +18,13 @@ import androidx.compose.ui.unit.dp
 import com.google.firebase.auth.FirebaseUser
 
 @Composable
-fun MoviesScreenInternal(
+fun MajorScreenInternal(
     // 이름 변경 및 파라미터 조정
     // navController: NavController, // AppNavigation에서 관리하므로 직접 필요 X
     // auth: FirebaseAuth, // ViewModel에서 관리
     user: FirebaseUser?, // ViewModel의 currentUser 사용
     mainViewModel: MainViewModel,
-    onNavigateToMovieDetail: (String) -> Unit, // 상세 화면 이동 콜백
+    onNavigateToMajorDetail: (String) -> Unit, // 상세 화면 이동 콜백
     showSnackBar: (String) -> Unit, // 스낵바 표시용
 ) {
     Column(
@@ -44,7 +44,7 @@ fun MoviesScreenInternal(
         Button(
             onClick = {
                 mainViewModel.signOut() // ViewModel 통해 로그아웃
-                Log.d("MoviesScreen", "Sign out clicked.")
+                Log.d(" MajorScreen", "Sign out clicked.")
                 showSnackBar("로그아웃 되었습니다.")
                 // 네비게이션은 AppNavigation의 LaunchedEffect(currentUser)가 처리
             },
@@ -54,10 +54,10 @@ fun MoviesScreenInternal(
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = {
-                onNavigateToMovieDetail("exampleMovie123") // 콜백 호출
+                onNavigateToMajorDetail("example Major123") // 콜백 호출
             },
         ) {
-            Text("View Dummy Movie Detail")
+            Text("View Dummy  Major Detail")
         }
         // 여기에 실제 영화 목록 등을 표시하는 UI 추가 가능
     }

@@ -12,7 +12,7 @@ import kotlinx.serialization.Serializable
 object LoginRoute
 
 @Serializable
-object MoviesRoute
+object  MajorRoute
 
 @Serializable
 object SignUpRoute

@@ -47,7 +47,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes.LoginRoute
-import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes.MoviesRoute
+import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes. MajorRoute
 import com.TYTgoogle.TYTfirebase.TYTexample.ui.theme.FirebaseDataConnectTheme
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -91,7 +91,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(paddingValues),
                         mainViewModel = mainViewModel,
                         auth = auth, // ViewModel에서 인증 처리 권장
-                        startDestination = if (currentUser != null) MoviesRoute else LoginRoute,
+                        startDestination = if (currentUser != null) MajorRoute else LoginRoute,
                         showSnackBar = { message ->
                             coroutineScope.launch {
                                 snackbarHostState.showSnackbar(message)

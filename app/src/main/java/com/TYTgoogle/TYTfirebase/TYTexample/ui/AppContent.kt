@@ -17,7 +17,7 @@ import com.TYTgoogle.TYTfirebase.TYTexample.ui.theme.FirebaseDataConnectTheme
 // 가정: Route들은 com.TYTgoogle.TYTfirebase.TYTexample.ui.routes 패키지에 정의되어 있음
 import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes.LoginRoute
 import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes.SignUpRoute
-import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes.MoviesRoute // MoviesRoute도 routes 패키지에 있다고 가정
+import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes. MajorRoute // MoviesRoute도 routes 패키지에 있다고 가정
 import com.TYTgoogle.TYTfirebase.TYTexample.ui.routes.MovieDetailRoute // MovieDetailRoute도 routes 패키지에 있다고 가정
 
 // 화면 Composable import - 실제 정의된 위치에 따라 경로 확인 필요

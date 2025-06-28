@@ -20,6 +20,6 @@
     <string name="unknown_error">An unknown error occurred</string>
 
     <!-- Movie Detail Screen -->
-    <string name="error_movie_not_found">Couldn\'t find movie in the database</string>
+    <string name="error_movie_not_found">Couldn\'t find  Major in the database</string>
     <string name="description_not_available">Description not available</string>
 </resources>

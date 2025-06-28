@@ -12,7 +12,7 @@
     <string name="app_sp">Firebase sp Connect</string>
     <string name="default_web_client_id" translatable="false">108262343680-0dc08po1du6g93dfk9kc530j1thfn71o.apps.googleusercontent.com</string>
     <string name="description_not_available">Description not available</string>
-    <string name="error_movie_not_found">Couldn\'t find movie in the database</string>
+    <string name="error_movie_not_found">Couldn\'t find  Major in the database</string>
     <string name="gcm_defaultSenderId" translatable="false">108262343680</string>
     <string name="google_api_key" translatable="false">AIzaSyAj31wvdd4kjd0E9qxuvcxIUXTbwQpar8I</string>
     <string name="google_app_id" translatable="false">1:108262343680:android:96c2baa0dcf86f8dd684e5</string>
