@@ -1,17 +1,24 @@
-package com.TYTgoogle.TYTfirebase.TYTexample // 패키지 이름은 실제 프로젝트에 맞게!
+package com.TYTgoogle.TYTfirebase.TYTexample
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -20,103 +27,187 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-
-// LoginScreen import (실제 경로에 맞게 확인하세요)
-// LoginScreen.kt 파일이 com.TYTgoogle.TYTfirebase.TYTexample.ui 패키지 내에 있다고 가정합니다.
 import com.TYTgoogle.TYTfirebase.TYTexample.ui.LoginScreen
 
-// 화면 라우트 정의
+
+
+// --- 기존 라우트 정의 ---
 object LoginRoute {
     const val route = "login"
 }
 
-object MajorRoute {
-    const val routeTemplate = "movies/{userEmail}" // 사용자 이메일을 전달받기 위한 템플릿
-    fun createRoute(userEmail: String?) = "movies/${userEmail ?: "Guest"}" // 실제 경로 생성 함수
-    const val USER_EMAIL_ARG = "userEmail" // MoviesScreen에서 받을 인자 이름
+object MajorRoute { // 이제 Main Hub Screen 또는 Dashboard 역할
+    const val routeTemplate = "major/{userEmail}"
+    fun createRoute(userEmail: String?) = "major/${userEmail ?: "Guest"}"
+    const val USER_EMAIL_ARG = "userEmail"
 }
 
-// 메인 영화 목록 화면 (예시)
+// --- 20개 시리즈 라우트 정의 시작 (AA ~ AS) ---
+
+// Helper function to create series routes to reduce boilerplate
+fun createSeriesRoutes(seriesPrefix: String): Pair<String, String> {
+    val dominantRoute = "${seriesPrefix.lowercase()}_dominant"
+    val l1ScreenRoute = "${seriesPrefix.lowercase()}_l1_screen"
+    return Pair(dominantRoute, l1ScreenRoute)
+}
+
+val seriesNames = ('A'..'A') // AA to AS (20 series)
+    .flatMap { firstChar -> ('A'..'S').map { secondChar -> "$firstChar$secondChar" } }
+    .take(20) // Ensure exactly 20 series
+
+object Routes {
+    val seriesRoutes = seriesNames.associateWith { createSeriesRoutes(it) }
+}
+// --- 20개 시리즈 라우트 정의 끝 ---
+
+
+// 메인 허브 화면 (기존 MajorScreen 역할)
 @Composable
-fun MajorScreen(userEmail: String?, onLogout: () -> Unit) {
+fun MainHubScreen(
+    userEmail: String?,
+    onLogout: () -> Unit,
+    navController: NavHostController
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
     ) {
-        Text("Welcome to AppNavigation.kt  in  Major 의 메이져 스크린 과  49 라인, ${userEmail ?: "Guest"}!")
+        Text(
+            "Welcome to Main Hub, ${userEmail ?: "Guest"}!",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold
+        )
         Spacer(modifier = Modifier.height(16.dp))
-        // 여기에 영화 목록이나 다른 콘텐츠 UI가 들어갈 수 있습니다.
+
+        LazyColumn( // 버튼이 많으므로 LazyColumn 사용
+            modifier = Modifier.weight(1f), // 남은 공간을 채우도록
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            items(Routes.seriesRoutes.size) { index ->
+                val seriesName = seriesNames[index]
+                val (dominantRoute, _) = Routes.seriesRoutes[seriesName]!!
+                Button(
+                    onClick = { navController.navigate(dominantRoute) },
+                    modifier = Modifier.fillMaxWidth(0.8f)
+                ) {
+                    Text("$seriesName 시리즈 가기")
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onLogout) {
-            Text("Logout 메이져 스크린 53 라인")
+            Text("Logout")
+        }
+    }
+}
+
+
+// --- 20개 시리즈를 위한 Generic 스크린 Composable 함수들 시작 ---
+@Composable
+fun GenericDominantScreen(
+    seriesName: String,
+    l1ScreenRoute: String,
+    navController: NavHostController
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text("$seriesName 도미넌트 스크린 (L0)", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        Spacer(modifier = Modifier.height(24.dp))
+        Button(onClick = { navController.navigate(l1ScreenRoute) }) {
+            Text("$seriesName - L1 기능 가기")
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("뒤로 가기 (Main Hub로)")
         }
     }
 }
 
 @Composable
-fun AppNavigation(
-    modifier: Modifier = Modifier, // <--- 추가
-    navController: NavHostController = rememberNavController(),
-    mainViewModel: MainViewModel, // <--- 추가
-    auth: FirebaseAuth,
-    startDestination: Any, // <--- 추가 (타입-세이프 Route 객체로 받는 것이 이상적)
-    showSnackBar: (String) -> Unit
+fun GenericL1Screen(
+    seriesName: String,
+    navController: NavHostController
 ) {
-    // 앱 시작 시 사용자가 이미 로그인했는지 확인하여 시작 지점 결정
-    // 실제로는 ViewModel에서 이 로직을 처리하고 초기 라우트를 결정하는 것이 좋습니다.
-    val startDestination = if (auth.currentUser != null) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text("$seriesName - L1 기능 스크린", fontSize = 18.sp)
+        Spacer(modifier = Modifier.height(16.dp))
+        Card(elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text("이것은 $seriesName 시리즈의 L1 화면입니다.")
+                Text("간단한 내용을 표시합니다.")
+            }
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("뒤로 가기 (${seriesName} Dominant로)")
+        }
+    }
+}
+// --- 20개 시리즈를 위한 Generic 스크린 Composable 함수들 끝 ---
+
+
+@Composable
+fun AppNavigation(
+    modifier: Modifier = Modifier, // <--- 이 부분을 추가하거나 확인하세요!
+    auth: FirebaseAuth,
+    showSnackBar: (String) -> Unit
+    // MainViewModel 등은 필요시 주입 (현재 예제에서는 직접 사용 안함)
+) {
+    val navController = rememberNavController()
+
+    val startDestinationRoute = if (auth.currentUser != null) {
         MajorRoute.createRoute(auth.currentUser?.email)
     } else {
         LoginRoute.route
     }
 
-    NavHost(navController = navController, startDestination = startDestination) {
+    NavHost(navController = navController, startDestination = startDestinationRoute) {
+        // --- 기존 로그인 및 메인 허브 라우트 ---
         composable(LoginRoute.route) {
-            // LoginScreen 호출 시 auth, onLoginSuccess, showSnackBar 등을 전달합니다.
-            // onNavigateToSignUp은 FirebaseUI를 사용하면 LoginScreen 내부에서
-            // 직접 처리되거나 필요 없을 수 있습니다.
             LoginScreen(
-                auth = auth, // LoginScreen이 FirebaseAuth 인스턴스를 직접 사용한다면 전달
+                auth = auth,
                 onLoginSuccess = { firebaseUser: FirebaseUser ->
-                    // 로그인 성공! FirebaseUser 객체를 받았습니다.
-                    val userEmailForRoute = firebaseUser.email // 또는 displayName 등 필요한 정보
-
-                    // MoviesScreen으로 이동하고, 경로에 사용자 이메일 포함
+                    val userEmailForRoute = firebaseUser.email
                     navController.navigate(MajorRoute.createRoute(userEmailForRoute)) {
-                        // 로그인 화면은 백스택에서 제거 (뒤로 가기 시 다시 안 보이게)
                         popUpTo(LoginRoute.route) { inclusive = true }
-                        // 이미 MoviesScreen이 백스택에 있다면 새로 만들지 않고 기존 것을 사용
                         launchSingleTop = true
                     }
-                    // 스낵바 표시는 LoginScreen 내부의 onSignInResult에서도 이미 처리될 수 있으므로
-                    // 여기서는 중복 호출을 피하거나, LoginScreen 내부 호출을 제거하고 여기서만 할 수 있습니다.
-                    // 현재 LoginScreen.kt의 onSignInResult에서 스낵바를 보여주고 있으므로,
-                    // 여기서는 추가적인 스낵바 호출이 필요 없을 수 있습니다.
-                    // showSnackBar("Navigating to Movies screen...") // 필요하다면 추가
                 },
-                onNavigateToSignUp = { navController.navigate("signup_route_if_needed") }, // 만약 별도 가입 화면이 있다면
-                showSnackBar = showSnackBar, // LoginScreen 내부에서 스낵바를 사용하도록 전달
+                onNavigateToSignUp = { /* TODO */ },
+                showSnackBar = showSnackBar,
             )
         }
 
         composable(
-            route = MajorRoute.routeTemplate, // 경로 템플릿 사용
+            route = MajorRoute.routeTemplate,
             arguments = listOf(
                 navArgument(MajorRoute.USER_EMAIL_ARG) {
                     type = NavType.StringType
-                    nullable = true // 사용자 이메일이 없을 수도 있음을 고려
+                    nullable = true
                 },
-            ), // 인자 정의
+            ),
         ) { backStackEntry ->
-            // 전달받은 사용자 이메일 가져오기
             val userEmail = backStackEntry.arguments?.getString(MajorRoute.USER_EMAIL_ARG)
-            MajorScreen(
+            MainHubScreen( // MajorScreen 대신 MainHubScreen 사용
                 userEmail = userEmail,
+                navController = navController,
                 onLogout = {
-                    auth.signOut() // Firebase 로그아웃
-                    // 로그아웃 후 로그인 화면으로 이동하고 이전 백스택 모두 제거
+                    auth.signOut()
                     navController.navigate(LoginRoute.route) {
                         popUpTo(navController.graph.startDestinationId) { inclusive = true }
                         launchSingleTop = true
@@ -126,11 +217,27 @@ fun AppNavigation(
             )
         }
 
-        // 만약 SignUpScreen으로의 명시적인 라우팅이 필요하다면 여기에 추가:
-        // composable("signup_route_if_needed") {
-        //     SignUpScreen(...)
-        // }
+        // --- 20개 시리즈를 NavHost에 동적으로 등록 시작 ---
+        Routes.seriesRoutes.forEach { (seriesName, routes) ->
+            val (dominantRoute, l1ScreenRoute) = routes
+
+            // 각 시리즈의 Dominant Screen (L0) 등록
+            composable(dominantRoute) {
+                GenericDominantScreen(
+                    seriesName = seriesName,
+                    l1ScreenRoute = l1ScreenRoute,
+                    navController = navController
+                )
+            }
+
+            // 각 시리즈의 L1 Screen 등록
+            composable(l1ScreenRoute) {
+                GenericL1Screen(
+                    seriesName = seriesName,
+                    navController = navController
+                )
+            }
+        }
+        // --- 20개 시리즈를 NavHost에 동적으로 등록 끝 ---
     }
 }
-
-
