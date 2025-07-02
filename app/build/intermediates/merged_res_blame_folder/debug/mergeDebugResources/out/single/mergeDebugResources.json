@@ -32,6 +32,10 @@
         "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image42_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image42_base.jpg"
+    },
+    {
         "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable-anydpi-v24_splash_icon.xml.flat",
         "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:/drawable-anydpi-v24/splash_icon.xml"
     },
@@ -64,6 +68,18 @@
         "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image41_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image41_base.jpg"
+    },
+    {
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image8_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image8_base.jpg"
+    },
+    {
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image9_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image9_base.jpg"
+    },
+    {
         "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/mipmap-hdpi/ic_launcher.webp"
     },
@@ -82,6 +98,10 @@
     {
         "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image10_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image10_base.jpg"
     },
     {
         "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/mipmap-mdpi_ic_launcher_round.webp.flat",

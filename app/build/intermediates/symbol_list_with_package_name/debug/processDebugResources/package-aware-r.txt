@@ -3072,6 +3072,11 @@ drawable ic_passkey
 drawable ic_password
 drawable ic_search_black_24
 drawable icon_background
+drawable image10_base
+drawable image41_base
+drawable image42_base
+drawable image8_base
+drawable image9_base
 drawable indeterminate_static
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
