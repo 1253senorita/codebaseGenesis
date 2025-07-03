@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 꽃잎 1 (상) -->
+    <path
+        android:fillColor="#FFC0CB"
+        android:pathData="M54,20 C44,30 44,45 54,50 C64,45 64,30 54,20 Z" />
+    <!-- 꽃잎 2 (하) -->
+    <path
+        android:fillColor="#FFC0CB"
+        android:pathData="M54,88 C44,78 44,63 54,58 C64,63 64,78 54,88 Z" />
+    <!-- 꽃잎 3 (좌) -->
+    <path
+        android:fillColor="#FFC0CB"
+        android:pathData="M20,54 C30,44 45,44 50,54 C45,64 30,64 20,54 Z" />
+    <!-- 꽃잎 4 (우) -->
+    <path
+        android:fillColor="#FFC0CB"
+        android:pathData="M88,54 C78,44 63,44 58,54 C63,64 78,64 88,54 Z" />
+
+    <!-- 꽃잎 5 (좌상) -->
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M35,35 C40,40 45,40 50,35 Q45,30 35,35 Z"
+        android:rotation="45"
+        android:pivotX="54"
+        android:pivotY="54"/>
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M35,35 C40,40 45,40 50,35 Q45,30 35,35 Z"
+        android:rotation="135"
+        android:pivotX="54"
+        android:pivotY="54"/>
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M35,35 C40,40 45,40 50,35 Q45,30 35,35 Z"
+        android:rotation="225"
+        android:pivotX="54"
+        android:pivotY="54"/>
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M35,35 C40,40 45,40 50,35 Q45,30 35,35 Z"
+        android:rotation="315"
+        android:pivotX="54"
+        android:pivotY="54"/>
+
+
+    <!-- 꽃술 (중앙) -->
+    <path
+        android:fillColor="#FFFFE0"
+        android:pathData="M54,54m-10,0a10,10 0,1,1,20,0a10,10 0,1,1,-20,0" />
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M54,54m-6,0a6,6 0,1,1,12,0a6,6 0,1,1,-12,0" />
+
+</vector>
+
+
