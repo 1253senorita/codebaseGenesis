@@ -22,6 +22,9 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.google.services)
+
+
+
 }
 
 android {
@@ -106,6 +109,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation("androidx.core:core-splashscreen:1.0.1")
 
-
+    implementation(project(":tytpdfmodule"))
 
 }

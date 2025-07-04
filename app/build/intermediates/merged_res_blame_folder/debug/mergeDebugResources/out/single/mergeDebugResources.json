@@ -1,174 +1,114 @@
 [
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-xxhdpi_splash_icon.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-xxhdpi\\splash_icon.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-ldpi_splash_icon.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-ldpi\\splash_icon.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-xhdpi\\ic_launcher_round.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image8_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image8_base.jpg"
     },
     {
-        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_ic_launcher.xml.flat",
-        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/ic_launcher.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image9_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image9_base.jpg"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-ldpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-ldpi\\ic_launcher_round.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/xml_data_extraction_rules.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable_image10_base.jpg.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\drawable\\image10_base.jpg"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image42_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image42_base.jpg"
     },
     {
-        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image03_ic.xml.flat",
-        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image03_ic.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image05_ic.xml.flat",
-        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image05_ic.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-xxhdpi\\ic_launcher_round.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image02_ic.xml.flat",
-        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image02_ic.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_ic_launcher_round.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable_ic_launcher.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\drawable\\ic_launcher.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image05_ic.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image05_ic.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-xhdpi_splash_icon.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-xhdpi\\splash_icon.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_ic_launcher_round.xml.flat",
-        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/ic_launcher_round.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image02_ic.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image02_ic.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-xxxhdpi_splash_icon.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-xxxhdpi\\splash_icon.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_ic_launcher.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-hdpi\\ic_launcher_round.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_image01_ic.xml.flat",
-        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/image01_ic.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/xml_backup_rules.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-mdpi_splash_icon.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-mdpi\\splash_icon.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\xml_network_security_config.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\xml\\network_security_config.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image03_ic.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image03_ic.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-xxxhdpi\\ic_launcher_round.png"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image01_ic.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image01_ic.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-76:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_image10_base.jpg.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/image10_base.jpg"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable_image8_base.jpg.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\drawable\\image8_base.jpg"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/drawable_splash_icon.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/drawable/splash_icon.xml"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:/drawable_splash_icon.xml.flat",
-        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:/drawable/splash_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\xml\\backup_rules.xml"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-anydpi-v24_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-anydpi-v24\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable_image9_base.jpg.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\drawable\\image9_base.jpg"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-anydpi-v24_splash_icon.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-anydpi-v24\\splash_icon.xml"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-mdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable_image42_base.jpg.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\drawable\\image42_base.jpg"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\drawable-hdpi_splash_icon.png.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-pngs-75:\\drawable-hdpi\\splash_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-debug-80:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\55341\\.gradle\\daemon\\8.14.2\\com.TYTgoogle.TYTfirebase.TYTexample.app-main-82:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.TYTgoogle.TYTfirebase.TYTexample.app-debug-81:/xml_network_security_config.xml.flat",
+        "source": "com.TYTgoogle.TYTfirebase.TYTexample.app-main-83:/xml/network_security_config.xml"
     }
 ]

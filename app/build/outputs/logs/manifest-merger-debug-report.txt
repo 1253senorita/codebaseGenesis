@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-46:12
-INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-46:12
-INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-46:12
-INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-46:12
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-53:12
+INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-53:12
+INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-53:12
+INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:1-53:12
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\55341\.gradle\caches\8.14.2\transforms\35a4399b3434983accdab2702a8d099c\transformed\jetified-firebase-ui-auth-8.0.2\AndroidManifest.xml:2:1-119:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\a4e112ae2736544fcd0ee9dff1069591\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth:23.2.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\3e4e594d72af883e1eb09c86033f0aad\transformed\jetified-firebase-auth-23.2.1\AndroidManifest.xml:17:1-75:12
@@ -45,6 +45,9 @@ MERGED from [androidx.compose.ui:ui-tooling-android:1.8.3] C:\Users\55341\.gradl
 MERGED from [androidx.compose.ui:ui-graphics-android:1.8.3] C:\Users\55341\.gradle\caches\8.14.2\transforms\13e78616f5925f96a7514e3c7c0a31cf\transformed\jetified-ui-graphics-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-test-manifest:1.8.3] C:\Users\55341\.gradle\caches\8.14.2\transforms\e31ef88f5c850513f8f9d07b7d2657fe\transformed\jetified-ui-test-manifest-1.8.3\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\d3a79c62fecd38b53dc1fa65b5261c2f\transformed\jetified-accompanist-drawablepainter-0.32.0\AndroidManifest.xml:17:1-23:12
+MERGED from [:tytpdfmodule] C:\Users\55341\TeminaterTT\codelab-dataconnect-android\tytpdfmodule\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\0b19f800efcd135523e056e3ce959cac\transformed\jetified-material-icons-extended-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\cd6e0c7d0ac5415a7cdf66c3ba426e6c\transformed\jetified-material-icons-core-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\99f3af858cec81a7f0364a22fb11547a\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\e408d80deee52ef1da7877cbe83ac4a3\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\555ee234f120b77982d8f8d4fbe60cfd\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -89,7 +92,6 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] C:\Users\55341\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\1a28c269d95e9059ade6ad2caf251471\transformed\lifecycle-livedata-core-2.9.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\7fdaef632f82e6fce2dc88c4d29a4e99\transformed\lifecycle-livedata-2.9.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\2324507f815161707fffff2e184ff50b\transformed\jetified-lifecycle-viewmodel-compose-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\cd6e0c7d0ac5415a7cdf66c3ba426e6c\transformed\jetified-material-icons-core-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-android:1.8.3] C:\Users\55341\.gradle\caches\8.14.2\transforms\c01343afa74fe0676818086ab6b9ef70\transformed\jetified-ui-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.activity:activity-ktx:1.10.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\43df11cb854d5258ed783ec95c42b8aa\transformed\jetified-activity-ktx-1.10.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\586e7c1a153d2816b1b0fcf66ae1c295\transformed\jetified-lifecycle-runtime-ktx\AndroidManifest.xml:2:1-7:12
@@ -133,8 +135,8 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\55341\.gradle\c
 	xmlns:android
 		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:18:11-69
 application
-ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:22:5-44:19
-INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:22:5-44:19
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:22:5-51:19
+INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:22:5-51:19
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\55341\.gradle\caches\8.14.2\transforms\35a4399b3434983accdab2702a8d099c\transformed\jetified-firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.firebaseui:firebase-ui-auth:8.0.2] C:\Users\55341\.gradle\caches\8.14.2\transforms\35a4399b3434983accdab2702a8d099c\transformed\jetified-firebase-ui-auth-8.0.2\AndroidManifest.xml:25:5-117:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\a4e112ae2736544fcd0ee9dff1069591\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
@@ -212,25 +214,35 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\55341\.gradle\c
 	android:dataExtractionRules
 		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:24:9-65
 activity#com.TYTgoogle.TYTfirebase.TYTexample.MainActivity
-ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:33:9-43:20
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:34:9-44:20
 	android:label
-		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:36:13-43
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:37:13-43
 	android:exported
-		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:35:13-36
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:36:13-36
 	android:theme
-		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:37:13-54
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:38:13-54
 	android:name
-		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:34:13-41
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:35:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:38:13-42:29
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:39:17-69
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:39:25-66
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:41:27-74
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:42:27-74
+activity#com.TYTgoogle.TYTfirebase.TYTexample.PdfViewerActivity
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:46:9-48:40
+	android:exported
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:48:13-37
+	android:name
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:47:13-46
+activity#com.TYTgoogle.TYTfirebase.TYTexample.SimpleTextActivity
+ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:49:9-56
+	android:name
+		ADDED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml:49:19-53
 uses-sdk
 INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\55341\TeminaterTT\codelab-dataconnect-android\app\src\main\AndroidManifest.xml
@@ -317,6 +329,12 @@ MERGED from [androidx.compose.ui:ui-test-manifest:1.8.3] C:\Users\55341\.gradle\
 MERGED from [androidx.compose.ui:ui-test-manifest:1.8.3] C:\Users\55341\.gradle\caches\8.14.2\transforms\e31ef88f5c850513f8f9d07b7d2657fe\transformed\jetified-ui-test-manifest-1.8.3\AndroidManifest.xml:20:5-44
 MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\d3a79c62fecd38b53dc1fa65b5261c2f\transformed\jetified-accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
 MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\d3a79c62fecd38b53dc1fa65b5261c2f\transformed\jetified-accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
+MERGED from [:tytpdfmodule] C:\Users\55341\TeminaterTT\codelab-dataconnect-android\tytpdfmodule\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:tytpdfmodule] C:\Users\55341\TeminaterTT\codelab-dataconnect-android\tytpdfmodule\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\0b19f800efcd135523e056e3ce959cac\transformed\jetified-material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\0b19f800efcd135523e056e3ce959cac\transformed\jetified-material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\cd6e0c7d0ac5415a7cdf66c3ba426e6c\transformed\jetified-material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\cd6e0c7d0ac5415a7cdf66c3ba426e6c\transformed\jetified-material-icons-core-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\99f3af858cec81a7f0364a22fb11547a\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\99f3af858cec81a7f0364a22fb11547a\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\55341\.gradle\caches\8.14.2\transforms\e408d80deee52ef1da7877cbe83ac4a3\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
@@ -405,8 +423,6 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.1] C:\Users\55341\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\7fdaef632f82e6fce2dc88c4d29a4e99\transformed\lifecycle-livedata-2.9.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\2324507f815161707fffff2e184ff50b\transformed\jetified-lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\2324507f815161707fffff2e184ff50b\transformed\jetified-lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\cd6e0c7d0ac5415a7cdf66c3ba426e6c\transformed\jetified-material-icons-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\55341\.gradle\caches\8.14.2\transforms\cd6e0c7d0ac5415a7cdf66c3ba426e6c\transformed\jetified-material-icons-core-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-android:1.8.3] C:\Users\55341\.gradle\caches\8.14.2\transforms\c01343afa74fe0676818086ab6b9ef70\transformed\jetified-ui-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-android:1.8.3] C:\Users\55341\.gradle\caches\8.14.2\transforms\c01343afa74fe0676818086ab6b9ef70\transformed\jetified-ui-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity-ktx:1.10.1] C:\Users\55341\.gradle\caches\8.14.2\transforms\43df11cb854d5258ed783ec95c42b8aa\transformed\jetified-activity-ktx-1.10.1\AndroidManifest.xml:5:5-44

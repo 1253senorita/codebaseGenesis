@@ -1,3 +1,5 @@
+
+
 package com.TYTgoogle.TYTfirebase.TYTexample
 
 import android.os.Bundle
@@ -35,11 +37,17 @@ import java.util.Locale
 // AppNavigation.kt 또는 다른 파일에서 이들을 import 해야 합니다.
 // (실제 프로젝트 구조에 맞게 경로 수정 필요)
 import com.TYTgoogle.TYTfirebase.TYTexample.ui.LoginScreen // 실제 LoginScreen 경로
-import com.TYTgoogle.TYTfirebase.TYTexample.MajorScreen
+//import com.TYTgoogle.TYTfirebase.TYTexample.GenericL1Screen
 import com.TYTgoogle.TYTfirebase.TYTexample.GenericDominantScreen
-import com.TYTgoogle.TYTfirebase.TYTexample.GenericL1Screen
+import com.TYTgoogle.TYTfirebase.TYTexample.GenericDominantScreen
+
+// 아래와 같이 실제 파일 위치에 맞게 수정해야 합니다.
+import com.TYTgoogle.TYTfirebase.TYTexample.MajorScreen // 예시 경로
+import com.TYTgoogle.TYTfirebase.TYTexample.GenericL1Screen // 예시 경로
+import com.TYTgoogle.TYTfirebase.TYTexample.GenericDominantScreen // 예시 경로
+
 import com.TYTgoogle.TYTfirebase.TYTexample.LoginRoute
-import com.TYTgoogle.TYTfirebase.TYTexample.MajorRoute
+//import com.TYTgoogle.TYTfirebase.TYTexample.MajorScreen
 import com.TYTgoogle.TYTfirebase.TYTexample.Routes
 import com.TYTgoogle.TYTfirebase.TYTexample.allSeriesData // allSeriesData 임포트
 
@@ -222,6 +230,5 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 

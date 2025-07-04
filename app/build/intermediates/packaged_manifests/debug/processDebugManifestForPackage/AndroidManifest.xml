@@ -69,6 +69,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.TYTgoogle.TYTfirebase.TYTexample.PdfViewerActivity"
+            android:exported="false" />
+        <activity android:name="com.TYTgoogle.TYTfirebase.TYTexample.SimpleTextActivity" /> <!-- 이 줄 확인! -->
 
         <meta-data
             android:name="com.google.android.gms.version"

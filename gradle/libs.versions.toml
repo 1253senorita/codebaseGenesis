@@ -90,4 +90,4 @@ google-services = { id = "com.google.gms.google-services", version.ref = "google
 #kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinCompilerExtensionVersion" }
 
 android-library = { id = "com.android.library", version.ref = "agp" }
-# google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" } # 만약 alias로 사용한다면
+# google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
