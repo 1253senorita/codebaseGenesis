@@ -3259,9 +3259,9 @@ id buttonPanel
 id button_continue
 id button_create
 id button_done
-id button_next
 id button_resend_email
 id button_sign_in
+id button_sign_up
 id cache_measures
 id cancel_action
 id cancel_button
@@ -5673,5 +5673,6 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 xml backup_rules
 xml data_extraction_rules
+xml file_paths
 xml image_share_filepaths
 xml network_security_config

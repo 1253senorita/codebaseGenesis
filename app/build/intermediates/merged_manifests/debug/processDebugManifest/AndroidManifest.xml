@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- Copyright 2025 Google LLC
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
+<!-- ... (라이선스 주석 등) ... -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.TYTgoogle.TYTfirebase.TYTexample"
     android:versionCode="1"
@@ -61,18 +47,35 @@
         <activity
             android:name="com.TYTgoogle.TYTfirebase.TYTexample.MainActivity"
             android:exported="true"
-            android:label="@string/app_sp"
-            android:theme="@style/Theme.App.Starting" >
+            android:label="@string/app_name" > <!-- app_name을 사용하거나 특정 라벨을 지정합니다. -->
+            <!-- android:theme 속성을 제거하여 Application의 테마를 상속받음 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--
+        Jetpack Compose 방식에서는 별도의 PdfViewerActivity 선언이 필요하지 않을 수 있습니다.
+        만약 필요하다면 아래 주석을 해제하고 exported 속성 등을 알맞게 설정하세요.
         <activity
-            android:name="com.TYTgoogle.TYTfirebase.TYTexample.PdfViewerActivity"
+            android:name=".PdfViewerActivity"
             android:exported="false" />
-        <activity android:name="com.TYTgoogle.TYTfirebase.TYTexample.SimpleTextActivity" /> <!-- 이 줄 확인! -->
+        -->
+
+        <activity android:name="com.TYTgoogle.TYTfirebase.TYTexample.SimpleTextActivity" />
+
+        <!-- 외부 앱으로 PDF 열기 시 필요한 FileProvider 선언 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.TYTgoogle.TYTfirebase.TYTexample.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <meta-data
             android:name="com.google.android.gms.version"

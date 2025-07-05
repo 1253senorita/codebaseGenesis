@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.TYTgoogle.TYTfirebase.TYTexample.app-mergeDebugResources-79:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.TYTgoogle.TYTfirebase.TYTexample.app-mergeDebugResources-78:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\55341\\.gradle\\caches\\8.14.2\\transforms\\35a4399b3434983accdab2702a8d099c\\transformed\\jetified-firebase-ui-auth-8.0.2\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\55341\\.gradle\\caches\\8.14.2\\transforms\\41eeb785909c948fa30037de31984e2e\\transformed\\jetified-firebase-ui-auth-9.0.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

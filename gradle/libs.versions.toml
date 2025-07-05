@@ -1,6 +1,12 @@
 [versions]
-agp = "8.11.0"
+
+#  인터페이스 모듈--------------->>>>>>>
+androidPdfViewer = "3.2.0-beta.1" # <-- Uncomment this line
 coreSplashscreen = "1.0.1"
+#  인터페이스 모듈--------------->>>>>>>
+
+
+agp = "8.11.0"
 kotlin = "2.2.0"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -10,14 +16,14 @@ lifecycleRuntimeKtx = "2.9.1"
 activityCompose = "1.10.1"
 composeBom = "2025.06.01"
 coilCompose = "2.7.0"
-composeNavigation = "2.9.0"
-kotlinxSerializationCore = "1.8.1"
-googleServices = "4.4.2"
+composeNavigation = "2.9.1"
+kotlinxSerializationCore = "1.9.0"
+googleServices = "4.4.3"
 
 firebaseAuth = "23.2.1"
 firebaseDataConnect = "16.0.2"
 #firebaseDataConnect = "0.1.1-beta"
-firebaseUiAuth = "8.0.2" # FirebaseUI Auth 버전 (예시, 최신 버전 확인)
+firebaseUiAuth = "9.0.0" # FirebaseUI Auth 버전 (예시, 최신 버전 확인)
 firebaseBom = "33.16.0" # 또는 최신 Firebase BoM 버전
 firebase = "32.7.1"
 material = "1.12.0"  #쩍꿍
@@ -30,8 +36,14 @@ playServicesAuth = "21.3.0" # 또는 최신 안정 버전
 
 
 
+
 [libraries]
 
+
+android-pdf-viewer = { module = "com.github.barteksc:android-pdf-viewer", version.ref = "androidPdfViewer" } # <-- Uncomment this line
+
+
+#android-pdf-viewer = { module = "com.github.barteksc:android-pdf-viewer", version.ref = "androidPdfViewer" }
 google-android-gms-play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
 
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }  #쩍꿍

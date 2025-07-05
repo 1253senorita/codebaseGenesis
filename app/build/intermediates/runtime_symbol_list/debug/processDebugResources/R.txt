@@ -3258,9 +3258,9 @@ int id buttonPanel 0x7f080062
 int id button_continue 0x7f080063
 int id button_create 0x7f080064
 int id button_done 0x7f080065
-int id button_next 0x7f080066
-int id button_resend_email 0x7f080067
-int id button_sign_in 0x7f080068
+int id button_resend_email 0x7f080066
+int id button_sign_in 0x7f080067
+int id button_sign_up 0x7f080068
 int id cache_measures 0x7f080069
 int id cancel_action 0x7f08006a
 int id cancel_button 0x7f08006b
@@ -7379,5 +7379,6 @@ int styleable ViewStubCompat_android_layout 1
 int styleable ViewStubCompat_android_inflatedId 2
 int xml backup_rules 0x7f130000
 int xml data_extraction_rules 0x7f130001
-int xml image_share_filepaths 0x7f130002
-int xml network_security_config 0x7f130003
+int xml file_paths 0x7f130002
+int xml image_share_filepaths 0x7f130003
+int xml network_security_config 0x7f130004

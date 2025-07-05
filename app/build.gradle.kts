@@ -1,5 +1,4 @@
 
-
 /*
  * Copyright 2025 Google LLC
  *
@@ -107,8 +106,28 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation(libs.androidx.core.splashscreen)
 
+
+
+
+    //인터패이스 모듈.------------->>>>>>>>>
     implementation(project(":tytpdfmodule"))
+    //implementation(libs.android.pdf.viewer) // <-- Uncomment this line
+     //인터패이스 모듈.------------->>>>>>>>>
+
+
+
+     //인터패이스 모듈.------------->>>>>>>>>
+    // iText 7 PDF 생성 라이브러리
+   // implementation("com.itextpdf:itext7-core:7.2.5") // 7.2.5는 예시 버전입니다. 최신 안정 버전을 확인하세요.
+    //implementation("com.itextpdf:layout:7.2.5")    // itext7-core와 버전을 맞춰주세요.
+    //implementation("com.itextpdf:io:7.2.5")          // 폰트 처리 등에 필요할 수 있습니다. 버전을 맞춰주세요.
+    //인터패이스 모듈.------------->>>>>>>>>
+
+    // 만약 SLF4J 관련 경고가 발생한다면, 다음을 추가하여 해결할 수 있습니다.
+    // implementation("org.slf4j:slf4j-android:1.7.32") // 예시 버전
+
+
 
 }

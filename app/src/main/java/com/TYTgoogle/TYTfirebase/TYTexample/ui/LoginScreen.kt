@@ -56,7 +56,7 @@ fun LoginScreen(
     val firebaseUiSignInIntent = AuthUI.getInstance()
         .createSignInIntentBuilder()
         .setAvailableProviders(providers)
-        .setIsSmartLockEnabled(!BuildConfig.DEBUG, true)
+        //.setIsSmartLockEnabled(!BuildConfig.DEBUG)
         .build()
 
     Column(
