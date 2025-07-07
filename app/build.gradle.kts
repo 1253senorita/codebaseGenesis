@@ -128,6 +128,6 @@ dependencies {
     // 만약 SLF4J 관련 경고가 발생한다면, 다음을 추가하여 해결할 수 있습니다.
     // implementation("org.slf4j:slf4j-android:1.7.32") // 예시 버전
 
-
+// 사용 가능한 최신 버전으로 확인
 
 }

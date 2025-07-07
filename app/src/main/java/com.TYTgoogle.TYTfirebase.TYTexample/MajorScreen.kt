@@ -1,6 +1,7 @@
 package com.TYTgoogle.TYTfirebase.TYTexample
 
 import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,11 +22,13 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -114,6 +117,10 @@ fun MajorScreen(
                 Text("나의 특별 기능")
             }
 
+
+
+
+
             Button(
                 onClick = { navController.navigate("app_info_route") },
                 modifier = Modifier
@@ -130,6 +137,9 @@ fun MajorScreen(
                 Spacer(Modifier.size(ButtonDefaults.IconSpacing))
                 Text("앱 정보 보기")
             }
+
+
+
 
             OutlinedButton(
                 onClick = { navController.navigate("customer_support_route") },
@@ -162,6 +172,73 @@ fun MajorScreen(
                 Text("간단한 텍스트 화면 테스트")
             }
             // --- 여기까지 "간단한 텍스트 화면 테스트" 버튼 ---
+
+
+
+
+
+            // --- 새로운 웹 페이지 링크 버튼 ---
+            Button(
+                onClick = {
+                    // 이동할 웹 페이지 주소
+                    val webPageUrl = "https://www.google.com" // 여기에 원하는 웹 주소를 입력하세요.
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(webPageUrl))
+                    // Intent를 처리할 수 있는 앱이 있는지 확인 (선택 사항이지만 권장)
+                    if (intent.resolveActivity(context.packageManager) != null) {
+                        context.startActivity(intent)
+                    } else {
+                        // 웹 브라우저가 없는 경우 사용자에게 알림 (예: Toast 메시지)
+                        // Toast.makeText(context, "웹 브라우저를 찾을 수 없습니다.", Toast.LENGTH_LONG).show()
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                shape = RoundedCornerShape(12.dp),
+                elevation = ButtonDefaults.buttonElevation(defaultElevation = 4.dp),
+            ) {
+                Text(
+                    text = "google으로 이동하기 🔗",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = Color.White
+                )
+            }
+            // --- 여기까지 새로운 웹 페이지 링크 버튼 ---
+
+
+
+
+
+
+            // --- 새로운 웹 페이지 링크 버튼 ---
+            Button(
+                onClick = {
+                    // 이동할 웹 페이지 주소
+                    val webPageUrl = "https://www.bing.com/" // 여기에 원하는 웹 주소를 입력하세요.
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(webPageUrl))
+                    // Intent를 처리할 수 있는 앱이 있는지 확인 (선택 사항이지만 권장)
+                    if (intent.resolveActivity(context.packageManager) != null) {
+                        context.startActivity(intent)
+                    } else {
+                        // 웹 브라우저가 없는 경우 사용자에게 알림 (예: Toast 메시지)
+                        // Toast.makeText(context, "웹 브라우저를 찾을 수 없습니다.", Toast.LENGTH_LONG).show()
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                shape = RoundedCornerShape(12.dp),
+                elevation = ButtonDefaults.buttonElevation(defaultElevation = 4.dp),
+            ) {
+                Text(
+                    text = "Bing으로 이동하기 🔗",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = Color.White
+                )
+            }
+            // --- 여기까지 새로운 웹 페이지 링크 버튼 ---
+
+
 
 
 

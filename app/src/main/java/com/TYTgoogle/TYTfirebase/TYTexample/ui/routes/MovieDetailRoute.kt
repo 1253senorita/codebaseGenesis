@@ -3,30 +3,20 @@ package com.TYTgoogle.TYTfirebase.TYTexample.ui.routes // 패키지 경로는 �
 
 import kotlinx.serialization.Serializable
 
-// --- 기존 제공된 라우트 ---
-@Serializable
-object MajorRoute // 어떤 화면으로 매핑될지 정의 필요
+
 
 @Serializable
 object LoginRoute // 기존 AppNavigation.kt의 LoginRoute 대체
 
-@Serializable
-object MoviesRoute // 영화 목록 화면 등으로 사용
 
 @Serializable
 object SignUpRoute // 회원가입 화면으로 사용
 
-@Serializable
-data class MovieDetailRoute(val movieId: String)
 
 
 
 
 
-
-// --- AppNavigation.kt의 MainHubRoute를 Serializable로 변경 ---
-@Serializable
-data class MainHubRoute(val userEmail: String?) // 인자가 있으므로 data class
 
 
 
