@@ -1,21 +1,5 @@
 package com.TYTgoogle.TYTfirebase.TYTexample // 패키지 선언은 파일 상단에 있어야 합니다.
 
-// AndroidX 및 Jetpack Compose UI 관련
-// import androidx.compose.material.icons.filled.ExitToApp // automirrored와 중복 가능성
-//import androidx.compose.material.icons.filled.PictureAsPdf
-
-// Navigation 관련
-
-// 프로젝트 내부 데이터 클래스 및 리소스
-
-// Firebase 관련 (필요한 경우)
-
-// Android 시스템 관련
-
-
-// ... (기존 imports) ...
-//import androidx.compose.material3.ButtonDefaults // ButtonDefaults import
-// tytpdfmodule의 PdfHandler import 시 패키지명 변경
 import com.TYTgoogle.TYTfirebase.TYTexample.data.ActionItem
 import com.TYTgoogle.TYTfirebase.TYTexample.data.ActionType
 import com.TYTgoogle.TYTfirebase.TYTexample.data.SeriesInfo
@@ -34,12 +18,39 @@ import com.TYTgoogle.TYTfirebase.TYTexample.data.SeriesInfo
 
 // ... (AppNavigation.kt 파일의 나머지 코드)
 
+// AndroidX 및 Jetpack Compose UI 관련
+// import androidx.compose.material.icons.filled.ExitToApp // automirrored와 중복 가능성
+//import androidx.compose.material.icons.filled.PictureAsPdf
+
+// Navigation 관련
+
+// 프로젝트 내부 데이터 클래스 및 리소스
+
+// Firebase 관련 (필요한 경우)
+
+// Android 시스템 관련
+// ... (기존 imports) ...
+//import androidx.compose.material3.ButtonDefaults // ButtonDefaults import
+// tytpdfmodule의 PdfHandler import 시 패키지명 변경
 
 
+// import com.TYTgoogle.TYTfirebase.TYTexample.data.SeriesInfo // SeriesInfo 임포트는 유지
 
+// ... (다른 import들)
 
+//private val Icons.AutoMirrored.Filled.HelpOutline: ImageVector
 
+// AppNavigation.kt 파일 내 또는 별도의 Data 파일에 정의 가능
 
+object LoginRoute {
+    const val route = "login"
+}
+
+object MajorRoute {
+    const val routeTemplate = "major/{userEmail}"
+    fun createRoute(userEmail: String?) = "major/${userEmail ?: "Guest"}"
+    const val USER_EMAIL_ARG = "userEmail"
+}
 
 object Routes {
     val seriesRoutes: Map<String, Pair<String, String>> = allSeriesData.associate { seriesInfo ->
@@ -55,27 +66,6 @@ fun createSeriesRoutes(seriesId: String): Pair<String, String> {
 }
 
 
-
-
-object LoginRoute {
-    const val route = "login"
-}
-
-object MajorRoute {
-    const val routeTemplate = "major/{userEmail}"
-    fun createRoute(userEmail: String?) = "major/${userEmail ?: "Guest"}"
-    const val USER_EMAIL_ARG = "userEmail"
-}
-
-
-
-// import com.TYTgoogle.TYTfirebase.TYTexample.data.SeriesInfo // SeriesInfo 임포트는 유지
-
-// ... (다른 import들)
-
-//private val Icons.AutoMirrored.Filled.HelpOutline: ImageVector
-
-// AppNavigation.kt 파일 내 또는 별도의 Data 파일에 정의 가능
 val allSeriesData: List<SeriesInfo> = listOf(
     SeriesInfo(
         id = "BEAUTY01",
@@ -158,7 +148,22 @@ val allSeriesData: List<SeriesInfo> = listOf(
             ActionItem(displayText = "운동 프로그램", actionType = ActionType.NAVIGATE_SUB_DOMINANT, targetRoute = "fitness_program_view"),
             ActionItem(displayText = "트레이너 찾기", actionType = ActionType.NAVIGATE_SUB_DOMINANT, targetRoute = "fitness_trainer_search"),
         ) // <--- Potential missing closing parenthesis or comma here
-    ) // <--- This closes SeriesInfo
+    ),// <--- This closes SeriesInfo
+            SeriesInfo(
+            id = "7FINE077",
+    displayName = "fine01",
+    imageUrl = null,
+    iconResId = R.drawable.image03_ic, // 실제 드로어블 리소스
+    initialActions = listOf(
+        ActionItem(displayText = "fine01 프로그램", actionType = ActionType.NAVIGATE_SUB_DOMINANT, targetRoute = "fitness_program_view"),
+        ActionItem(displayText = "fine01 찾기", actionType = ActionType.NAVIGATE_SUB_DOMINANT, targetRoute = "fitness_trainer_search"),
+    ) // <--- Potential missing closing parenthesis or comma here
+), // <--- This clos
+
+
+
+
+
 )
 
 

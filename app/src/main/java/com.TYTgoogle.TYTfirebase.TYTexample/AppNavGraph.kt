@@ -1,5 +1,6 @@
 package com.TYTgoogle.TYTfirebase.TYTexample
 
+//import MajorScreen
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
@@ -22,7 +23,7 @@ fun AppNavGraph(navController: NavHostController, /* 필요한 다른 파라미�
             arguments = listOf(navArgument(MajorRoute.USER_EMAIL_ARG) { type = NavType.StringType; nullable = true })
         ) { backStackEntry ->
             val userEmail = backStackEntry.arguments?.getString(MajorRoute.USER_EMAIL_ARG)
-            MajorScreen(userEmail = userEmail, navController = navController)
+            //MajorScreen(userEmail = userEmail, navController = navController)
         }
 
         // allSeriesData를 기반으로 동적 라우트 생성 (예시)
