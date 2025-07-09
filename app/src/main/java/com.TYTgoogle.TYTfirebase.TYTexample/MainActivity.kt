@@ -1,7 +1,7 @@
-
-
 package com.TYTgoogle.TYTfirebase.TYTexample
 
+// ... (기존 import들은 대부분 유지, MajorScreen import 경로 확인)
+//import MajorScreen // MajorScreen.kt의 MajorScreen Composable
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -9,16 +9,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.ExitToApp
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material3.* // Material 3 import
+// MainActivity의 TopAppBar에서 사용하던 아이콘들은 MajorScreen으로 옮겨가므로 여기서 제거 가능
+// import androidx.compose.material.icons.Icons
+// import androidx.compose.material.icons.filled.ExitToApp
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+// import androidx.compose.ui.unit.dp // Modifier.padding(paddingValues) 외 직접 사용 없으면 제거 가능
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
@@ -32,29 +32,19 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.launch
-import java.util.Locale
+// import java.util.Locale // 현재 미사용
 
-// AppNavigation.kt 또는 다른 파일에서 이들을 import 해야 합니다.
-// (실제 프로젝트 구조에 맞게 경로 수정 필요)
-import com.TYTgoogle.TYTfirebase.TYTexample.ui.LoginScreen // 실제 LoginScreen 경로
-//import com.TYTgoogle.TYTfirebase.TYTexample.GenericL1Screen
-import com.TYTgoogle.TYTfirebase.TYTexample.GenericDominantScreen
-import com.TYTgoogle.TYTfirebase.TYTexample.GenericDominantScreen
-
-// 아래와 같이 실제 파일 위치에 맞게 수정해야 합니다.
-import com.TYTgoogle.TYTfirebase.TYTexample.MajorScreen // 예시 경로
-import com.TYTgoogle.TYTfirebase.TYTexample.GenericL1Screen // 예시 경로
-import com.TYTgoogle.TYTfirebase.TYTexample.GenericDominantScreen // 예시 경로
-
+import com.TYTgoogle.TYTfirebase.TYTexample.ui.LoginScreen
 import com.TYTgoogle.TYTfirebase.TYTexample.LoginRoute
-//import com.TYTgoogle.TYTfirebase.TYTexample.MajorScreen
-import com.TYTgoogle.TYTfirebase.TYTexample.Routes
-import com.TYTgoogle.TYTfirebase.TYTexample.allSeriesData // allSeriesData 임포트
+import com.TYTgoogle.TYTfirebase.TYTexample.Routes // MajorRoute 접근 등
 
-// TopAppBar 상태를 위한 데이터 클래스
-data class TopAppBarState(
-    val title: String = "", // 기본적으로 제목 없음 (로그인 화면 등에서 TopAppBar 숨김 처리 위함)
-    val showActions: Boolean = false,
+// TopAppBarState는 이제 MainActivity에서 TopAppBar를 거의 사용하지 않으므로,
+// Login 화면 등에서 TopAppBar를 숨길지 여부만 판단하는 용도로 단순화될 수 있습니다.
+// 혹은 아예 제거하고, 각 화면이 자체적으로 Scaffold와 TopAppBar를 관리하도록 할 수도 있습니다.
+// 여기서는 Login 화면에서 TopAppBar가 없다는 것을 명시하기 위해 남겨둡니다.
+data class TopAppBarConfig( // 이름 변경 (선택적)
+    val showTopAppBar: Boolean = false, // 기본적으로 TopAppBar 숨김
+    val title: String = "" // Login 등에서는 사용 안 함
 )
 
 class MainActivity : ComponentActivity() {
@@ -67,7 +57,6 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         auth = Firebase.auth
-        val initialAppLocale = Locale.getDefault() // 다국어 지원용 (현재 코드에서는 직접 사용 안함)
 
         setContent {
             FirebaseDataConnectTheme {
@@ -75,35 +64,27 @@ class MainActivity : ComponentActivity() {
                 val isSplashVisible by mainViewModel.isSplashVisible.collectAsState()
                 val snackbarHostState = remember { SnackbarHostState() }
                 val coroutineScope = rememberCoroutineScope()
-                val navController = rememberNavController()
+                val mainAppNavController = rememberNavController()
 
-                var topAppBarState by remember { mutableStateOf(TopAppBarState()) }
-                val navBackStackEntry by navController.currentBackStackEntryAsState()
+                var topAppBarConfig by remember { mutableStateOf(TopAppBarConfig()) }
+                val navBackStackEntry by mainAppNavController.currentBackStackEntryAsState()
 
-                // 현재 라우트에 따라 TopAppBar 상태 업데이트
                 LaunchedEffect(navBackStackEntry) {
                     val currentRoute = navBackStackEntry?.destination?.route
-                    val currentLabel = navBackStackEntry?.destination?.label?.toString()
-
-                    topAppBarState = when {
-                        currentRoute == LoginRoute.route -> TopAppBarState(title = "", showActions = false) // 로그인 화면에서는 TopAppBar 숨김
-                        currentRoute?.startsWith(MajorRoute.routeTemplate.substringBefore("/{")) == true -> TopAppBarState(title = "메인 허브", showActions = true)
-                        Routes.seriesRoutes.any { it.value.first == currentRoute || it.value.second == currentRoute } -> {
-
-                            val seriesEntry = Routes.seriesRoutes.entries.find { it.value.first == currentRoute || it.value.second == currentRoute }
-
-                            val seriesInfo = allSeriesData.find { it.id == seriesEntry?.key }
-
-                            TopAppBarState(title = seriesInfo?.displayName ?: (currentLabel ?: "시리즈 화면"), showActions = false)
-                        }
-                        // 프로필 또는 설정 화면 라우트 추가 가능
-                        currentRoute == "profile_route" -> TopAppBarState(title = "내 정보", showActions = false)
-                        currentRoute == "settings_route" -> TopAppBarState(title = "설정", showActions = false)
-                        else -> TopAppBarState(title = currentLabel ?: "", showActions = false)
+                    topAppBarConfig = when { // when (value) 가 아닌 when {} 형태로 사용
+                        currentRoute == LoginRoute.route -> TopAppBarConfig(showTopAppBar = false)
+                        // MajorScreen 진입 시 MainActivity의 TopAppBar는 표시하지 않음
+                        // MajorScreen이 자체 TopAppBar를 가짐
+                        (currentRoute?.startsWith(MajorRoute.routeTemplate.substringBefore("/{")) ?: false) ->
+                            TopAppBarConfig(showTopAppBar = false) // 여기서 TopAppBar를 안 보이게 설정
+                        // 다른 최상위 화면에서 TopAppBar가 필요하다면 여기에 조건 추가
+                        currentRoute == "app_profile_route" -> TopAppBarConfig(showTopAppBar = true, title = "앱 프로필")
+                        currentRoute == "app_settings_route" -> TopAppBarConfig(showTopAppBar = true, title = "앱 설정")
+                        else -> TopAppBarConfig(showTopAppBar = false) // 기본적으로 숨김
                     }
                 }
 
-                // 스플래시 화면 표시 조건
+
                 LaunchedEffect(Unit) {
                     splashScreen.setKeepOnScreenCondition { isSplashVisible }
                 }
@@ -111,61 +92,31 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     snackbarHost = { SnackbarHost(snackbarHostState) },
                     topBar = {
-                        // 제목이 있을 때만 TopAppBar 표시 (로그인 화면 등에서 숨기기 위함)
-                        if (topAppBarState.title.isNotBlank()) {
+                        // MainActivity의 TopAppBar는 이제 MajorScreen에서는 표시되지 않음.
+                        // Login 화면에서는 원래부터 없었고, 다른 최상위 화면에서 필요시에만 표시.
+                        if (topAppBarConfig.showTopAppBar && topAppBarConfig.title.isNotBlank()) {
                             TopAppBar(
-                                title = { Text(topAppBarState.title) },
-                                actions = {
-                                    if (topAppBarState.showActions) {
-                                        // 현재 라우트가 MajorScreen과 관련된 경우에만 액션 표시
-                                        if (navController.currentDestination?.route?.startsWith(MajorRoute.routeTemplate.substringBefore("/{")) == true) {
-                                            val currentUserEmail = auth.currentUser?.email
-                                            Text(
-                                                text = "Welcome, ${currentUserEmail ?: "Guest"}!",
-                                                style = MaterialTheme.typography.bodySmall,
-                                                modifier = Modifier.padding(end = 8.dp)
-                                            )
-                                            IconButton(onClick = { navController.navigate("profile_route") }) {
-                                                Icon(Icons.Filled.AccountCircle, contentDescription = "내 정보")
-                                            }
-                                            IconButton(onClick = {
-                                                auth.signOut()
-                                                navController.navigate(LoginRoute.route) {
-                                                    popUpTo(navController.graph.startDestinationId) { inclusive = true }
-                                                    launchSingleTop = true
-                                                }
-                                                coroutineScope.launch { snackbarHostState.showSnackbar("Logged out.") }
-                                            }) {
-                                                Icon(Icons.Filled.ExitToApp, contentDescription = "로그아웃")
-                                            }
-                                            IconButton(onClick = { navController.navigate("settings_route") }) {
-                                                Icon(Icons.Filled.Settings, contentDescription = "설정")
-                                            }
-                                        }
-                                    }
-                                }
+                                title = { Text(topAppBarConfig.title) }
+                                // actions는 여기서 관리하지 않음. 각 화면이 필요시 자체 TopAppBar에 구현
                             )
                         }
                     }
                 ) { paddingValues ->
-                    // NavHost를 직접 정의하여 네비게이션 그래프 설정
                     NavHost(
-                        navController = navController,
+                        navController = mainAppNavController,
                         startDestination = if (auth.currentUser != null) MajorRoute.createRoute(auth.currentUser?.email) else LoginRoute.route,
-                        modifier = Modifier.padding(paddingValues) // Scaffold로부터 받은 패딩 적용
+                        modifier = Modifier.padding(paddingValues)
                     ) {
-                        // 로그인 화면
                         composable(LoginRoute.route) {
-                            LoginScreen( // 실제 LoginScreen Composable
+                            LoginScreen(
                                 auth = auth,
                                 onLoginSuccess = { firebaseUser ->
-                                    navController.navigate(MajorRoute.createRoute(firebaseUser.email)) {
+                                    mainAppNavController.navigate(MajorRoute.createRoute(firebaseUser.email)) {
                                         popUpTo(LoginRoute.route) { inclusive = true }
                                         launchSingleTop = true
                                     }
                                 },
                                 onNavigateToSignUp = {
-                                    // TODO: 회원가입 화면으로 네비게이션 로직 구현
                                     coroutineScope.launch { snackbarHostState.showSnackbar("회원가입 화면으로 이동 (구현 필요)") }
                                 },
                                 showSnackBar = { message ->
@@ -174,7 +125,6 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        // 메인 화면 (MajorScreen)
                         composable(
                             route = MajorRoute.routeTemplate,
                             arguments = listOf(navArgument(MajorRoute.USER_EMAIL_ARG) {
@@ -183,45 +133,28 @@ class MainActivity : ComponentActivity() {
                             })
                         ) { backStackEntry ->
                             val userEmail = backStackEntry.arguments?.getString(MajorRoute.USER_EMAIL_ARG)
-                            MajorScreen( // onLogout 파라미터가 없는 버전
+                            MajorScreen(
                                 userEmail = userEmail,
-                                navController = navController
+                                mainAppNavController = mainAppNavController
                             )
                         }
 
-                        // 동적으로 생성된 dominantRoute 시리즈 SeriesInfo 라우트들
-                        Routes.seriesRoutes.forEach { (seriesId, routesPair) ->
-                            val (dominantRoute, l1ScreenRoute) = routesPair
-                            val seriesInfo = allSeriesData.find { it.id == seriesId }
-
-                            composable(dominantRoute) {
-                                GenericDominantScreen(
-                                    seriesName = seriesInfo?.displayName ?: seriesId,
-                                    l1ScreenRoute = l1ScreenRoute,
-                                    navController = navController
-                                )
-                            }
-                            composable(l1ScreenRoute) {
-                                GenericL1Screen(
-                                    seriesName = seriesInfo?.displayName ?: seriesId,
-                                    navController = navController
-                                )
+                        composable("app_profile_route") {
+                            // 이 화면은 자체 Scaffold와 TopAppBar를 가질 수도 있고,
+                            // MainActivity의 TopAppBar를 사용할 수도 있습니다. (현재는 MainActivity의 것 사용)
+                            Box(modifier = Modifier.fillMaxSize().padding(16.dp)) { // paddingValues 대신 직접 지정
+                                Text("앱 프로필 화면 (최상위)", style = MaterialTheme.typography.headlineMedium)
                             }
                         }
-
-                        // 프로필 화면 라우트 (임시)
-                        composable("profile_route") {
-                            // TODO: 실제 ProfileScreen 컴포저블로 교체
-                            Box(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
-                                Text("프로필 화면 (구현 필요)", style = MaterialTheme.typography.headlineMedium)
+                        composable("app_settings_route") { // MainActivity의 TopAppBar 사용
+                            Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+                                Text("앱 설정 화면 (최상위)", style = MaterialTheme.typography.headlineMedium)
                             }
                         }
-
-                        // 설정 화면 라우트 (임시)
-                        composable("settings_route") {
-                            // TODO: 실제 SettingsScreen 컴포저블로 교체
-                            Box(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
-                                Text("설정 화면 (구현 필요)", style = MaterialTheme.typography.headlineMedium)
+                        // "app_settings_from_main" 라우트가 필요하다면 여기서 정의
+                        composable("app_settings_from_main") {
+                            Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+                                Text("MajorScreen에서 호출된 전체 앱 설정", style = MaterialTheme.typography.headlineMedium)
                             }
                         }
                     }
@@ -230,5 +163,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
